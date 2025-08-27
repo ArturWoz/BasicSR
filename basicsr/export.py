@@ -31,7 +31,7 @@ def export_model(root_path):
         folding = opt["export"]["constant_folding"]
     except:
         print("No export settings, using defaults")
-
+    name = "./export/" + name
     print("Starting export of " + opt["name"])
     onnx_program = torch.onnx.export(model,
                                      example_inputs,
